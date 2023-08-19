@@ -1,0 +1,20 @@
+\documentclass[class=article,border=10pt]{standalone}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage[americanresistors,americaninductors,RPvoltages]{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}  [american, scale=1]
+    \draw  
+    (0,0) to [V,l=$V_s$] (0,3)
+    (0,3) to [R,l=$R_1$,a=$330\,\Omega$] (3.5,3)
+    (3.5,3) to [D*, l_=1N914,v^=$V_{out}$] (3.5,0)    
+    (0,0) to [short,-] (3.5,0)    
+    ;
+
+\end{circuitikz}
+
+\end{document}

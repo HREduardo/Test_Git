@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{circuitikz}
+
+\begin{document}
+\begin{circuitikz}
+    % NPN Transistor
+    \draw (2,4) node[npn](npn){};
+    
+    % Resistor and voltage source connected to the base
+    \draw (0,4) to[R, l=$R_{\mathrm{B}}$] (npn.B);
+    \draw (0,0) to[V, v=$V_{\mathrm{BB}}$] (0,4);
+
+    % Collector and emitter connections
+    \draw (npn.C) -- (2,5) node[above] {$V_{\mathrm{CC}}$};
+
+    % Labels
+    \node at (1,4.8) {$I_{\mathrm{B}}$};
+\end{circuitikz}
+\end{document}

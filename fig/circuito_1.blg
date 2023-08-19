@@ -1,0 +1,5 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'circuito_1.blg'
+[173] biber-MSWIN64:340> INFO - === 
+[875] Utils.pm:410> ERROR - Cannot find 'circuito_1.bcf'!
+[876] Biber.pm:135> INFO - ERRORS: 1

@@ -1,0 +1,27 @@
+\documentclass[class=article,border=10pt]{standalone}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage[americanresistors,americaninductors,RPvoltages]{circuitikz}
+
+\newcommand{\twolineVert}[2]{\parbox{0.7cm}{#1\\#2}}
+\newcommand{\twolineHorz}[2]{\parbox{1.5cm}{#1 #2}}
+
+\begin{document}
+
+\begin{circuitikz}  [american, scale=1.2]
+    \draw  
+    (0,0) to [V,l=$12\,$V,i=$I_T$] (0,5)
+    (2.5,5) to [R,l=\twolineVert{$R_1$}{$1\,$k$\Omega$}] (2.5,2.5)
+    (2.5,2.5) to [R,l=\twolineVert{$R_4$}{$1\,$k$\Omega$}] (2.5,0)
+    (5,5) to [R,l=\twolineVert{$R_3$}{$1\,$k$\Omega$}] (5,2.5)
+    (5,2.5) to [R,l=\twolineVert{$R_5$}{$2\,$k$\Omega$}] (5,0)
+    (5,2.5) to [R, l_=$R_2$,a^=$1\,$k$\Omega$] (2.5,2.5)    
+    (0,0) to [short,-] (5,0)
+    (0,5) to [short,-] (5,5)    
+    ;
+
+\end{circuitikz}
+
+\end{document}

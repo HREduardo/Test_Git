@@ -1,0 +1,21 @@
+\documentclass[class=article,border=10pt]{standalone}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage[americanresistors,americaninductors,RPvoltages]{circuitikz}
+
+\begin{document}
+
+\begin{circuitikz}  [american, scale=1]
+    %\draw (3,2) node[npn] (npn) {$Q_1$};
+    \draw  
+    (0,0) to [V,l=$V_s$] (0,3)
+    (0,3) to [R,l=$R_2$,a=$1\,M\Omega$] (3.5,3)
+    (3.5,0) to [D*, l^=1N914,v_>=$V_{out}$] (3.5,3)    
+    (0,0) to [short,-] (3.5,0)    
+    ;
+
+\end{circuitikz}
+
+\end{document}
